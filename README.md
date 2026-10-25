@@ -1,6 +1,6 @@
-# M Software Muc Den
+# Mực Đen
 
-Trang giới thiệu (landing page) **tĩnh** — trang giới thiệu cho M Software Muc Den. Trang được dựng bằng HTML, CSS và JavaScript thuần, không cần bước biên dịch.
+Trang giới thiệu (landing page) **tĩnh** — trang giới thiệu cho Mực Đen. Trang được dựng bằng HTML, CSS và JavaScript thuần, không cần bước biên dịch.
 
 > Mọi tên, số điện thoại, địa chỉ và số liệu trên trang đều là **dữ liệu mẫu**. Giá hiển thị là **giá mẫu**. Biểu mẫu (nếu có) chỉ là giao diện minh họa: không gửi dữ liệu đi đâu và không có backend.
 
@@ -12,10 +12,11 @@ Mở `index.html` bằng trình duyệt (nhấp đúp, không cần máy chủ),
 
 | Tệp | Nội dung |
 |---|---|
+| `LICENSE` | Giấy phép MIT |
 | `README.md` | Tài liệu giới thiệu này |
 
 ## English
 
-A **static** landing page for M Software Muc Den, built with plain HTML, CSS and JavaScript. All names, contact details and figures shown are sample data, displayed prices are sample prices, and any form is interface-only — nothing is submitted and there is no backend. Open `index.html` in a browser. Licensed under MIT.
+A **static** landing page for Mực Đen, built with plain HTML, CSS and JavaScript. All names, contact details and figures shown are sample data, displayed prices are sample prices, and any form is interface-only — nothing is submitted and there is no backend. Open `index.html` in a browser. Licensed under MIT.
 
 Contact: contact@genalpha.dev
