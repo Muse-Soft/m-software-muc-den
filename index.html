@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mực Đen — Studio xăm nghệ thuật</title>
+<meta name="description" content="Mực Đen — studio xăm nghệ thuật: fine-line, blackwork, dotwork. Mực đen, nét thật.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2EDE3; --paper2:#E7DFD0; --ink:#171412; --ink2:#4A4238; --red:#C8432B;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Be Vietnam Pro",system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:16.5px;line-height:1.6}
+h1,h2,.serif{font-family:"Noto Serif Display",Georgia,serif}
+h1{font-size:52px;line-height:1.15;font-weight:600}
+h2{font-size:30px;line-height:1.25;font-weight:600}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(100%) contrast(1.06)}
+.label{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+.rule{width:48px;height:3px;background:var(--red)}
+.btn{display:inline-block;background:var(--red);color:#F2EDE3;font-weight:700;padding:13px 26px;border:none;cursor:pointer;font-size:16px}
+.btn:hover{opacity:.9}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+/* Header */
+header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--paper2)}
+.head{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:"Noto Serif Display",serif;font-size:26px;font-weight:700;letter-spacing:.04em}
+nav{display:flex;gap:26px;align-items:center}
+nav a{font-size:14.5px;font-weight:500}
+nav a:hover{color:var(--red)}
+nav .btn{padding:10px 20px;font-size:14.5px}
+/* Hero lệch tâm */
+.hero{padding:64px 0 72px}
+.hero-grid{display:grid;grid-template-columns:38% 60%;gap:2%;align-items:center}
+.hero-text .rule{margin:18px 0}
+.hero-text p{color:var(--ink2);margin:16px 0 26px;max-width:34ch}
+.hero-img{aspect-ratio:4/5;border:1px solid var(--paper2);overflow:hidden}
+.hero-img img{object-position:center}
+/* Khối chung */
+section{padding:64px 0}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:12px}
+.sec-head .ban{font-family:"Noto Serif Display",serif;color:var(--red);font-weight:700;white-space:nowrap}
+.sec-sub{color:var(--ink2);max-width:62ch;margin-bottom:36px}
+/* Triết lý */
+.phil{display:grid;grid-template-columns:52% 40%;gap:8%;align-items:center}
+.phil-img{aspect-ratio:1/1;border:1px solid var(--paper2);overflow:hidden}
+.styles{margin-top:24px;display:flex;flex-direction:column;gap:14px}
+.styles div{border-left:3px solid var(--red);padding-left:14px}
+.styles b{font-family:"Noto Serif Display",serif;font-size:19px}
+/* Lưới tác phẩm lệch tâm */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.work{border:1px solid var(--paper2);background:var(--paper2)}
+.work .ph{overflow:hidden}
+.work .ph.r11{aspect-ratio:1/1}.work .ph.r45{aspect-ratio:4/5}.work .ph.r34{aspect-ratio:3/4}
+.work:nth-child(2){transform:translateY(28px)}
+.work:nth-child(5){transform:translateY(28px)}
+.work-body{padding:16px 16px 18px}
+.work-body .ban{color:var(--red);font-family:"Noto Serif Display",serif;font-weight:700}
+.work-body h3{font-family:"Noto Serif Display",serif;font-size:20px;margin:2px 0}
+.work-body p{color:var(--ink2);font-size:14.5px}
+/* Nghệ sĩ */
+.artists{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.artist{border:1px solid var(--paper2);background:var(--paper2);padding-bottom:18px}
+.artist .port{aspect-ratio:1/1;overflow:hidden}
+.artist h3{font-family:"Noto Serif Display",serif;font-size:21px;padding:16px 16px 0}
+.artist .spec{color:var(--red);font-weight:700;font-size:14px;padding:0 16px}
+.artist p{color:var(--ink2);font-size:14.5px;padding:6px 16px 0}
+/* Quy trình bậc thang */
+.steps{display:flex;flex-direction:column;gap:0}
+.step{display:flex;gap:22px;padding:22px 0;border-top:1px solid var(--paper2);max-width:720px}
+.step:nth-child(even){margin-left:120px}
+.step .num{font-family:"Noto Serif Display",serif;color:var(--red);font-size:30px;font-weight:700;line-height:1}
+.step h3{font-family:"Noto Serif Display",serif;font-size:21px}
+.step p{color:var(--ink2);font-size:15px}
+/* Giá + form */
+.price-form{display:grid;grid-template-columns:48% 48%;gap:4%}
+table{width:100%;border-collapse:collapse;background:var(--paper2)}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--paper);font-size:15.5px}
+th{background:var(--ink);color:var(--paper)}
+td.price{color:var(--red);font-weight:700;white-space:nowrap}
+form{background:var(--paper2);padding:26px}
+form label{display:block;font-size:14px;font-weight:700;margin:14px 0 5px}
+form input,form select,form textarea{width:100%;padding:11px 12px;border:1px solid #cfc6b4;background:var(--paper);font-family:inherit;font-size:15.5px}
+form .btn{margin-top:20px;width:100%}
+.form-note{font-size:13.5px;color:var(--ink2);margin-top:12px}
+.form-ok{display:none;background:#e4efe0;border:1px solid #7aa87a;padding:12px 14px;margin-top:16px;font-size:15px}
+/* Footer */
+footer{background:var(--ink);color:var(--paper);padding:48px 0}
+footer .foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer h3{font-family:"Noto Serif Display",serif;font-size:24px}
+footer p{color:#cfc6b4;font-size:14.5px;margin-top:8px}
+.sample-note{font-size:13px;color:#9a917f;margin-top:28px}
+/* Mobile */
+@media (max-width:767px){
+  h1{font-size:32px} h2{font-size:26px}
+  nav a:not(.btn){display:none}
+  .hero-grid,.phil,.price-form{grid-template-columns:1fr}
+  .hero-img{order:-1}
+  .works,.artists{grid-template-columns:1fr}
+  .work:nth-child(2),.work:nth-child(5){transform:none}
+  .step:nth-child(even){margin-left:36px}
+  .phil-img{order:-1}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap head">
+    <a class="logo" href="#">MỰC ĐEN</a>
+    <nav>
+      <a href="#tac-pham">Tác phẩm</a>
+      <a href="#nghe-si">Nghệ sĩ</a>
+      <a href="#quy-trinh">Quy trình</a>
+      <a href="#bang-gia">Bảng giá</a>
+      <a class="btn" href="#dat-lich">Đặt lịch tư vấn</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- 2. Hero lệch tâm -->
+  <div class="hero"><div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="label">Studio xăm nghệ thuật — Bản 00</p>
+      <div class="rule"></div>
+      <h1>Mực đen, nét thật.</h1>
+      <p>Studio xăm nghệ thuật theo phong cách bảng flash cổ điển: mỗi hình xăm là một bản in tay trên da, nét mực đen sắc, không thừa, không phô.</p>
+      <a class="btn" href="#dat-lich">Đặt lịch tư vấn</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.fineartamerica.com/images-medium-large/tattoo-artist-at-work-in-black-and-white-vincent-duis.jpg" alt="Nghệ sĩ xăm đang làm việc, ảnh đen trắng" loading="eager">
+    </div>
+  </div></div>
+
+  <!-- 3. Triết lý -->
+  <section><div class="wrap">
+    <div class="sec-head"><span class="ban">BẢN 00 / TRIẾT LÝ</span></div>
+    <div class="phil">
+      <div>
+        <h2>Một tờ flash, một đời da.</h2>
+        <div class="rule" style="margin:16px 0"></div>
+        <p style="color:var(--ink2)">Chúng tôi làm việc như vẽ một tờ flash treo tường: phác thảo kỹ, mực đen thuần, đường kim đi một lần cho dứt khoát. Hình xăm đẹp nhất là hình càng nhìn lâu càng thấy đúng.</p>
+        <div class="styles">
+          <div><b>Fine-line</b> — nét mảnh, nhẹ, tinh tế; hợp hoa lá, chữ nhỏ, hình mini.</div>
+          <div><b>Blackwork</b> — mảng đen đậm, hình khối mạnh; hợp tay áo, lưng, hình lớn.</div>
+          <div><b>Dotwork</b> — chấm mực tạo khối và bóng; hợp mandala, hình học, họa tiết đối xứng.</div>
+        </div>
+      </div>
+      <div class="phil-img">
+        <img src="https://cdn-sites-images.46graus.com/files/photos/31feb8bb/c8815174-e1b6-4c2a-8497-e00c65f4031f/gilberto-5-2560x1706.jpg" alt="Nghệ sĩ xăm đang xăm cận cảnh bằng máy xăm" loading="lazy">
+      </div>
+    </div>
+  </div></section>
+
+  <!-- 4. Bộ sưu tập -->
+  <section id="tac-pham"><div class="wrap">
+    <div class="sec-head"><span class="ban">BẢN 01 — 06 / BỘ SƯU TẬP</span><h2>Tác phẩm mẫu</h2></div>
+    <p class="sec-sub">Lưới tác phẩm theo nhịp lệch tâm: mỗi ô là một bản trên tờ flash, đánh số đỏ son. Ảnh dưới đây là ảnh mẫu.</p>
+    <div class="works">
+      <article class="work">
+        <div class="ph r45"><img src="https://tattoobnb.com/cdn/shop/files/Small-Fine-Line-Floral-Bouquet-Tattoo-on-Women-Inner-Arm-by-cococreativetattoo-Tattoobnb.webp?v=1766296259" alt="Tác phẩm fine-line cành hoa hồng đen trên cánh tay" loading="lazy"></div>
+        <div class="work-body"><span class="ban">BẢN 01 / FINE-LINE</span><h3>Bó hoa hồng đen</h3><p>Vị trí mẫu: cánh tay</p></div>
+      </article>
+      <article class="work">
+        <div class="ph r11"><img src="https://framerusercontent.com/images/C1Sv9ZwEScT9onjMTAntq0sfVBQ.jpg?scale-down-to=1024&width=2384&height=2980" alt="Tác phẩm fine-line hoa mảnh trên cánh tay" loading="lazy"></div>
+        <div class="work-body"><span class="ban">BẢN 02 / FINE-LINE</span><h3>Hoa mảnh trên da</h3><p>Vị trí mẫu: cánh tay trên</p></div>
+      </article>
+      <article class="work">
+        <div class="ph r34"><img src="https://thai.tattoo/wp-content/uploads/2023/10/2022-11-30-23.54.17-2983049702505514922_7944567494-1280x1601.jpg" alt="Tác phẩm blackwork mảng đen lớn phủ kín lưng" loading="lazy"></div>
+        <div class="work-body"><span class="ban">BẢN 03 / BLACKWORK</span><h3>Mảng đen phủ lưng</h3><p>Vị trí mẫu: lưng</p></div>
+      </article>
+      <article class="work">
+        <div class="ph r11"><img src="https://images.squarespace-cdn.com/content/v1/5f03a82c9538b147e0df3c65/4a844f90-73a6-4ad8-9bf4-37ba248649b3/image-asset+%282%29.jpeg?format=750w" alt="Tác phẩm blackwork tay áo mảng đậm trên cánh tay" loading="lazy"></div>
+        <div class="work-body"><span class="ban">BẢN 04 / BLACKWORK</span><h3>Tay áo mảng đậm</h3><p>Vị trí mẫu: cánh tay</p></div>
+      </article>
+      <article class="work">
+        <div class="ph r45"><img src="https://d1kq2dqeox7x40.cloudfront.net/images/posts/nodes_5je2lGL0hF.jpg" alt="Tác phẩm dotwork mandala chấm mực trên cẳng tay" loading="lazy"></div>
+        <div class="work-body"><span class="ban">BẢN 05 / DOTWORK</span><h3>Mandala chấm mực</h3><p>Vị trí mẫu: cẳng tay</p></div>
+      </article>
+      <article class="work">
+        <div class="ph r34"><img src="https://d1kq2dqeox7x40.cloudfront.net/images/posts/nodes_JytK0FLqZZ.jpg" alt="Tác phẩm dotwork mandala đối xứng trên cẳng chân" loading="lazy"></div>
+        <div class="work-body"><span class="ban">BẢN 06 / DOTWORK</span><h3>Mandala đối xứng</h3><p>Vị trí mẫu: cẳng chân</p></div>
+      </article>
+    </div>
+  </div></section>
+
+  <!-- 5. Nghệ sĩ -->
+  <section id="nghe-si"><div class="wrap">
+    <div class="sec-head"><span class="ban">NGHỆ SĨ</span><h2>Người cầm kim</h2></div>
+    <p class="sec-sub">Tên nghệ sĩ thật chưa có — ghi [CẦN BỔ SUNG], không bịa tên. Ảnh dưới đây là ảnh mẫu.</p>
+    <div class="artists">
+      <article class="artist">
+        <div class="port"><img src="https://i.pinimg.com/originals/26/04/74/260474c09b3acf07c72d966461aca52a.jpg" alt="Nghệ sĩ xăm đang làm việc, ảnh đen trắng" loading="lazy"></div>
+        <h3>[CẦN BỔ SUNG]</h3>
+        <p class="spec">Sở trường: Fine-line</p>
+        <p>Tác phẩm đại diện: cành hoa mảnh trên cẳng tay (BẢN 01).</p>
+      </article>
+      <article class="artist">
+        <div class="port"><img src="https://publichealth.wincoil.gov/wp-content/uploads/2022/11/tattoo-artist-makes-a-tattoo-on-a-man-s-hand-2022-02-02-05-07-08-utc-1024x715.jpg" alt="Nghệ sĩ xăm đang xăm trên tay khách" loading="lazy"></div>
+        <h3>[CẦN BỔ SUNG]</h3>
+        <p class="spec">Sở trường: Blackwork</p>
+        <p>Tác phẩm đại diện: mảng đen phủ lưng (BẢN 03).</p>
+      </article>
+      <article class="artist">
+        <div class="port"><img src="https://stylesatlife.com/wp-content/uploads/2022/05/Best-Tattoo-Artists.jpg" alt="Nghệ sĩ xăm đang xăm cho khách trong studio" loading="lazy"></div>
+        <h3>[CẦN BỔ SUNG]</h3>
+        <p class="spec">Sở trường: Dotwork</p>
+        <p>Tác phẩm đại diện: mandala chấm mực (BẢN 05).</p>
+      </article>
+    </div>
+  </div></section>
+
+  <!-- 6. Quy trình -->
+  <section id="quy-trinh"><div class="wrap">
+    <div class="sec-head"><span class="ban">QUY TRÌNH</span><h2>4 bước, không vội</h2></div>
+    <p class="sec-sub">Các bước trình bày lệch bậc thang: bước chẵn thụt vào phải.</p>
+    <div class="steps">
+      <div class="step"><span class="num">01</span><div><h3>Tư vấn</h3><p>Nghe ý tưởng của bạn, xem vị trí da và tư vấn phong cách, kích thước phù hợp.</p></div></div>
+      <div class="step"><span class="num">02</span><div><h3>Phác thảo</h3><p>Vẽ bản phác theo đúng ý đã chốt, chỉnh đến khi bạn gật đầu mới đặt kim.</p></div></div>
+      <div class="step"><span class="num">03</span><div><h3>Xăm</h3><p>Đi kim dứt khoát, mực đen thuần, vệ sinh đúng chuẩn trong suốt buổi xăm.</p></div></div>
+      <div class="step"><span class="num">04</span><div><h3>Chăm sóc sau xăm</h3><p>Hướng dẫn kiêng cữ, dưỡng da và lịch kiểm tra lại sau khi hình lành.</p></div></div>
+    </div>
+  </div></section>
+
+  <!-- 7. Bảng giá + form -->
+  <section id="bang-gia"><div class="wrap">
+    <div class="sec-head"><span class="ban">BẢNG GIÁ MẪU</span><h2>Giá tham khảo</h2></div>
+    <p class="sec-sub">Giá thật do chủ studio cung cấp sẽ thay thế các mức mẫu dưới đây.</p>
+    <div class="price-form">
+      <div>
+        <table>
+          <tr><th>Phong cách</th><th>Mức mẫu</th></tr>
+          <tr><td>Fine-line — hình nhỏ</td><td class="price">từ 1.500.000đ (giá mẫu)</td></tr>
+          <tr><td>Blackwork — hình vừa</td><td class="price">từ 3.000.000đ (giá mẫu)</td></tr>
+          <tr><td>Dotwork</td><td class="price">từ 2.000.000đ (giá mẫu)</td></tr>
+        </table>
+        <p class="form-note">Giá cuối cùng tùy kích thước, vị trí và độ phức tạp — chốt sau buổi tư vấn.</p>
+      </div>
+      <form id="dat-lich">
+        <h3 style="font-family:'Noto Serif Display',serif;font-size:22px">Đặt lịch tư vấn</h3>
+        <p class="form-note">Form chỉ giao diện — bản demo này chưa gửi thông tin đi đâu.</p>
+        <label for="ten">Họ tên</label>
+        <input id="ten" type="text" placeholder="Tên của bạn" required>
+        <label for="sdt">Số điện thoại</label>
+        <input id="sdt" type="tel" placeholder="Số điện thoại liên hệ" required>
+        <label for="style">Phong cách muốn xăm</label>
+        <select id="style" required>
+          <option value="">— Chọn phong cách —</option>
+          <option>Fine-line</option><option>Blackwork</option><option>Dotwork</option><option>Chưa chắc — cần tư vấn</option>
+        </select>
+        <label for="idea">Mô tả ý tưởng</label>
+        <textarea id="idea" rows="3" placeholder="Bạn muốn xăm hình gì, ở vị trí nào?"></textarea>
+        <label for="ngay">Ngày mong muốn</label>
+        <input id="ngay" type="date">
+        <button class="btn" type="submit">Đặt lịch tư vấn</button>
+        <div class="form-ok" id="form-ok">Đã ghi nhận yêu cầu tư vấn (bản demo — form chưa gửi đi đâu, studio sẽ liên hệ sau khi có thông tin thật).</div>
+      </form>
+    </div>
+  </div></section>
+</main>
+
+<!-- 8. Footer -->
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h3>MỰC ĐEN</h3>
+      <p>Studio xăm nghệ thuật — Mực đen, nét thật.</p>
+    </div>
+    <div>
+      <p><b style="color:var(--paper)">Giờ mở cửa:</b> [CẦN BỔ SUNG]</p>
+      <p><b style="color:var(--paper)">Địa chỉ:</b> [CẦN BỔ SUNG]</p>
+      <p><b style="color:var(--paper)">Liên hệ:</b> [CẦN BỔ SUNG]</p>
+    </div>
+  </div>
+  <div class="wrap"><p class="sample-note">Trang demo: toàn bộ ảnh trên trang là ảnh mẫu, giá ghi rõ “(giá mẫu)”; thông tin thật (địa chỉ, điện thoại, giờ mở cửa, tên nghệ sĩ, giá thật, ảnh tác phẩm thật) đang chờ bổ sung.</p></div>
+</footer>
+
+<script>
+document.getElementById('dat-lich').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('form-ok').style.display = 'block';
+});
+</script>
+</body>
+</html>
