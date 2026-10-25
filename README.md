@@ -1,6 +1,6 @@
 # Mực Đen
 
-Trang giới thiệu (landing page) **tĩnh** — trang giới thiệu cho Mực Đen. Trang được dựng bằng HTML, CSS và JavaScript thuần, không cần bước biên dịch.
+Trang giới thiệu (landing page) **tĩnh** — mực Đen — studio xăm nghệ thuật: fine-line, blackwork, dotwork. Mực đen, nét thật. Trang được dựng bằng HTML, CSS và JavaScript thuần, không cần bước biên dịch.
 
 > Mọi tên, số điện thoại, địa chỉ và số liệu trên trang đều là **dữ liệu mẫu**. Giá hiển thị là **giá mẫu**. Biểu mẫu (nếu có) chỉ là giao diện minh họa: không gửi dữ liệu đi đâu và không có backend.
 
@@ -14,6 +14,7 @@ Mở `index.html` bằng trình duyệt (nhấp đúp, không cần máy chủ),
 |---|---|
 | `LICENSE` | Giấy phép MIT |
 | `README.md` | Tài liệu giới thiệu này |
+| `index.html` | Trang chính |
 
 ## English
 
